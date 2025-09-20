@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 
     title: '小区物业管理系统',
     /**
@@ -12,6 +12,6 @@ module.exports = {
      * @description Whether show the logo in sidebar
      */
     sidebarLogo: true,
-    //开启tagsview 
+    //开启tagsview
     tagsView: false,
 }

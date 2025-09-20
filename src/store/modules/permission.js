@@ -1,6 +1,23 @@
 import { constantRoutes } from '@/router'
 import { getMenuList } from '@/api/user'
 import Layout from '@/layout'
+
+const modules = import.meta.glob('../../views/**/*.vue')
+
+function loadView(component) {
+    if (!component) {
+        return null
+    }
+    let viewPath = component
+    if (!viewPath.startsWith('/')) {
+        viewPath = `/${viewPath}`
+    }
+    if (!viewPath.endsWith('.vue')) {
+        viewPath = `${viewPath}.vue`
+    }
+    const fullPath = `../../views${viewPath}`
+    return modules[fullPath]
+}
 /**
  * Use meta.role to determine if the current user has permission
  * @param roles
@@ -33,7 +50,10 @@ export function filterAsyncRoutes(routes, roles) {
                 if (component == 'Layout') {
                     tmp.component = Layout;
                 } else {
-                    tmp.component = (resolve) => require([`@/views${component}`], resolve)
+                    const view = loadView(component)
+                    if (view) {
+                        tmp.component = view
+                    }
                 }
             }
             if (tmp.children) {

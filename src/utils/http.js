@@ -5,8 +5,12 @@ import { getToken } from "@/utils/auth";
 import qs from "qs";
 // create an axios instance
 //创建一个axios实例
+const baseApiPro = typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_APP_BASE_API_PRO
+    ? import.meta.env.VITE_APP_BASE_API_PRO
+    : (typeof process !== 'undefined' && process.env && process.env.VITE_APP_BASE_API_PRO ? process.env.VITE_APP_BASE_API_PRO : '')
+
 const service = axios.create({
-    baseURL: process.env.VUE_APP_BASE_API_PRO, // url = base url + request url
+    baseURL: baseApiPro || '', // url = base url + request url
     withCredentials: true, // send cookies when cross-domain requests
     timeout: 60000 // request timeout - 增加到60秒，适应邮件服务等外部依赖
 });
