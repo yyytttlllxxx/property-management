@@ -1,0 +1,38 @@
+// sidebar
+//
+//菜单背景
+$menuBg:#ffffff; // 浅色背景，适配全局浅色主题
+//菜单鼠标悬浮时背景颜色
+$menuHover:#f4f6fa; // 轻微高亮的悬浮色
+//子菜单背景颜色
+$subMenuBg:#f8fafc; // 更浅的子菜单背景
+//子菜单鼠标悬浮时背景颜色
+$subMenuHover:#eef4ff; // 带少量品牌蓝的悬浮
+//
+//菜单字体
+$menuText:#4b5563; // 中性灰文本
+//菜单被选中字体
+$menuActiveText:#409EFF; // 品牌主色
+//子菜单被选中字体
+$subMenuActiveText:#1f2937; // 深色以增强可读性
+//
+//菜单宽度
+$sideBarWidth: 200px;
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+    menuText: $menuText;
+    menuActiveText: $menuActiveText;
+    subMenuActiveText: $subMenuActiveText;
+    menuBg: $menuBg;
+    menuHover: $menuHover;
+    subMenuBg: $subMenuBg;
+    subMenuHover: $subMenuHover;
+    sideBarWidth: $sideBarWidth;
+}
+
+// brand palette
+$brandPrimary: #409EFF;
+$brandText: #111827;
+$brandSubText: #6b7280;
+$brandBg: #f6f7fb;

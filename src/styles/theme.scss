@@ -1,0 +1,265 @@
+// 多元化智能化主题系统 - 色彩体系与设计规范
+// ============================================
+
+// 多元颜色基础色板（三套主题：亮色、暗色、高对比）
+// 浅色主题 - 主要
+:root[data-theme="light"], :root {
+  // 核心品牌色（智能蓝紫渐变系）
+  --color-primary: #5B8FF9;
+  --color-primary-light: #6A7FDB;
+  --color-primary-dark: #4C73D4;
+  --color-primary-surface: rgba(91, 143, 249, 0.08);
+  
+  // 辅助色（青绿科技感）
+  --color-secondary: #52C41A;
+  --color-secondary-light: #73D13D;
+  --color-secondary-dark: #389E0D;
+  --color-secondary-surface: rgba(82, 196, 26, 0.08);
+  
+  // 强调色（珊瑚橙活力感）
+  --color-accent: #FF7A45;
+  --color-accent-light: #FF8C69;
+  --color-accent-dark: #E86E31;
+  --color-accent-surface: rgba(255, 122, 69, 0.08);
+  
+  // 中性灰阶
+  --color-text-primary: #111827;
+  --color-text-secondary: #4B5563;
+  --color-text-tertiary: #6B7280;
+  --color-text-disabled: #9CA3AF;
+  --color-text-inverse: #FFFFFF;
+  
+  // 背景层级（智能分层）
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F9FAFB;
+  --color-bg-tertiary: #F3F4F6;
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-overlay: rgba(0, 0, 0, 0.6);
+  
+  // 边框与分割
+  --color-border-primary: rgba(0, 0, 0, 0.06);
+  --color-border-secondary: rgba(0, 0, 0, 0.04);
+  --color-border-focus: var(--color-primary);
+  
+  // 状态语义色
+  --color-success: #52C41A;
+  --color-warning: #FAAD14;
+  --color-error: #FF4D4F;
+  --color-info: #1890FF;
+  --color-success-bg: #F6FFED;
+  --color-warning-bg: #FFFBE6;
+  --color-error-bg: #FFF2F0;
+  --color-info-bg: #E6F7FF;
+  
+  // 动态阴影系统
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-focus: 0 0 0 3px rgba(91, 143, 249, 0.15);
+}
+
+// 暗色主题
+:root[data-theme="dark"] {
+  // 核心品牌色（保持识别度，增强对比）
+  --color-primary: #7BA7FC;
+  --color-primary-light: #8BB4FD;
+  --color-primary-dark: #6B9BFB;
+  --color-primary-surface: rgba(123, 167, 252, 0.12);
+  
+  // 辅助色
+  --color-secondary: #73D13D;
+  --color-secondary-light: #8FE65F;
+  --color-secondary-dark: #5BB118;
+  --color-secondary-surface: rgba(115, 209, 61, 0.12);
+  
+  // 强调色
+  --color-accent: #FF8C69;
+  --color-accent-light: #FFA085;
+  --color-accent-dark: #E86E31;
+  --color-accent-surface: rgba(255, 140, 105, 0.12);
+  
+  // 中性文本（暗色优化）
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #D1D5DB;
+  --color-text-tertiary: #9CA3AF;
+  --color-text-disabled: #6B7280;
+  --color-text-inverse: #111827;
+  
+  // 背景层级（深色分层）
+  --color-bg-primary: #111827;
+  --color-bg-secondary: #1F2937;
+  --color-bg-tertiary: #374151;
+  --color-bg-elevated: #1F2937;
+  --color-bg-overlay: rgba(0, 0, 0, 0.8);
+  
+  // 边框与分割（暗色优化）
+  --color-border-primary: rgba(255, 255, 255, 0.1);
+  --color-border-secondary: rgba(255, 255, 255, 0.06);
+  --color-border-focus: var(--color-primary);
+  
+  // 状态语义色（暗色优化）
+  --color-success: #73D13D;
+  --color-warning: #FFC53D;
+  --color-error: #FF7875;
+  --color-info: #40A9FF;
+  --color-success-bg: rgba(115, 209, 61, 0.12);
+  --color-warning-bg: rgba(255, 197, 61, 0.12);
+  --color-error-bg: rgba(255, 120, 117, 0.12);
+  --color-info-bg: rgba(64, 169, 255, 0.12);
+  
+  // 暗色阴影系统（用边框代替强阴影）
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-focus: 0 0 0 3px rgba(123, 167, 252, 0.25);
+}
+
+// 高对比主题（无障碍优化）
+:root[data-theme="high-contrast"] {
+  // 高对比品牌色
+  --color-primary: #0066CC;
+  --color-primary-light: #3399FF;
+  --color-primary-dark: #004499;
+  --color-primary-surface: rgba(0, 102, 204, 0.1);
+  
+  // 高对比辅助色
+  --color-secondary: #008A00;
+  --color-secondary-light: #00AA00;
+  --color-secondary-dark: #006600;
+  --color-secondary-surface: rgba(0, 138, 0, 0.1);
+  
+  // 高对比强调色
+  --color-accent: #CC3300;
+  --color-accent-light: #FF4422;
+  --color-accent-dark: #992200;
+  --color-accent-surface: rgba(204, 51, 0, 0.1);
+  
+  // 高对比文本
+  --color-text-primary: #000000;
+  --color-text-secondary: #333333;
+  --color-text-tertiary: #666666;
+  --color-text-disabled: #999999;
+  --color-text-inverse: #FFFFFF;
+  
+  // 高对比背景
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F0F0F0;
+  --color-bg-tertiary: #E0E0E0;
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-overlay: rgba(0, 0, 0, 0.9);
+  
+  // 高对比边框
+  --color-border-primary: #000000;
+  --color-border-secondary: #666666;
+  --color-border-focus: #0066CC;
+  
+  // 高对比状态色
+  --color-success: #008A00;
+  --color-warning: #FF8800;
+  --color-error: #CC0000;
+  --color-info: #0066CC;
+  --color-success-bg: #E8F5E8;
+  --color-warning-bg: #FFF4E6;
+  --color-error-bg: #FFE6E6;
+  --color-info-bg: #E6F2FF;
+  
+  // 高对比阴影
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  --shadow-focus: 0 0 0 4px rgba(0, 102, 204, 0.4);
+}
+
+// 字体与排版规范
+:root {
+  // 字体系统（中英混排优化）
+  --font-family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  
+  // 字号层级（8px 基准）
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  
+  // 行高层级
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  // 字重层级
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  // 间距系统（8px 栅格）
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 48px;
+  
+  // 圆角系统
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  // Z-Index 层级
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+  
+  // 动画时长与缓动
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --easing-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --easing-ease-in: cubic-bezier(0.42, 0, 1, 1);
+  --easing-ease-out: cubic-bezier(0, 0, 0.58, 1);
+  --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+// Element-UI 兼容映射（动态主题覆盖）
+:root {
+  --el-color-primary: var(--color-primary);
+  --el-color-primary-light-3: var(--color-primary-light);
+  --el-color-primary-light-5: var(--color-primary-surface);
+  --el-color-success: var(--color-success);
+  --el-color-warning: var(--color-warning);
+  --el-color-danger: var(--color-error);
+  --el-color-info: var(--color-info);
+  
+  --el-bg-color-page: var(--color-bg-secondary);
+  --el-bg-color: var(--color-bg-primary);
+  --el-bg-color-overlay: var(--color-bg-elevated);
+  
+  --el-text-color-primary: var(--color-text-primary);
+  --el-text-color-regular: var(--color-text-secondary);
+  --el-text-color-secondary: var(--color-text-tertiary);
+  --el-text-color-disabled: var(--color-text-disabled);
+  
+  --el-border-color: var(--color-border-primary);
+  --el-border-color-light: var(--color-border-secondary);
+  --el-border-color-lighter: var(--color-border-secondary);
+  
+  --el-box-shadow: var(--shadow-md);
+  --el-box-shadow-light: var(--shadow-sm);
+  --el-box-shadow-dark: var(--shadow-lg);
+}
