@@ -8,8 +8,12 @@ import store from '@/store'
 import { getToken } from '@/utils/auth'
 
 // create an axios instance
+const baseApi = typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_APP_BASE_API
+    ? import.meta.env.VITE_APP_BASE_API
+    : (typeof process !== 'undefined' && process.env && process.env.VITE_APP_BASE_API ? process.env.VITE_APP_BASE_API : '')
+
 const service = axios.create({
-    baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
+    baseURL: baseApi || '', // url = base url + request url
     // withCredentials: true, // send cookies when cross-domain requests
     timeout: 5000 // request timeout
 })
